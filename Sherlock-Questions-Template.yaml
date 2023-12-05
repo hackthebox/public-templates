@@ -1,0 +1,145 @@
+scenario: >
+ PLACEHOLDER TEXT
+description: >
+  DESCRIPTION
+questions:
+- number: 1
+  type: free
+  title: question text
+  flag: answer
+  answer_case_sensitive: false
+  placeholder: formatting stuff in answer box
+  requires: null
+- number: 2
+  type: free
+  title: question text
+  flag: answer
+  answer_case_sensitive: false
+  placeholder: formatting stuff in answer box
+  requires: null
+- number: 3
+  type: free
+  title: question text
+  flag: answer
+  answer_case_sensitive: false
+  placeholder: formatting stuff in answer box
+  requires: null
+- number: 4
+  type: free
+  title: question text
+  flag: answer
+  answer_case_sensitive: false
+  placeholder: formatting stuff in answer box
+  requires: null
+- number: 5
+  type: free
+  title: question text
+  flag: answer
+  answer_case_sensitive: false
+  placeholder: formatting stuff in answer box
+  requires: null
+- number: 6
+  type: free
+  title: question text
+  flag: answer
+  answer_case_sensitive: false
+  placeholder: formatting stuff in answer box
+  requires: null
+- number: 7
+  type: free
+  title: question text
+  flag: answer
+  answer_case_sensitive: false
+  placeholder: formatting stuff in answer box
+  requires: null
+- number: 8
+  type: free
+  title: question text
+  flag: answer
+  answer_case_sensitive: false
+  placeholder: formatting stuff in answer box
+  requires: null
+- number: 9
+  type: free
+  title: question text
+  flag: answer
+  answer_case_sensitive: false
+  placeholder: formatting stuff in answer box
+  requires: null
+- number: 10
+  type: free
+  title: question text
+  flag: answer
+  answer_case_sensitive: false
+  placeholder: formatting stuff in answer box
+  requires: null
+- number: 11
+  type: free
+  title: question text
+  flag: answer
+  answer_case_sensitive: false
+  placeholder: formatting stuff in answer box
+  requires: null
+- number: 12
+  type: free
+  title: question text
+  flag: answer
+  answer_case_sensitive: false
+  placeholder: formatting stuff in answer box
+  requires: null
+- number: 13
+  type: free
+  title: question text
+  flag: answer
+  answer_case_sensitive: false
+  placeholder: formatting stuff in answer box
+  requires: null
+- number: 14
+  type: free
+  title: question text
+  flag: answer
+  answer_case_sensitive: false
+  placeholder: formatting stuff in answer box
+  requires: null
+- number: 15
+  type: free
+  title: question text
+  flag: answer
+  answer_case_sensitive: false
+  placeholder: formatting stuff in answer box
+  requires: null
+- number: 16
+  type: free
+  title: question text
+  flag: answer
+  answer_case_sensitive: false
+  placeholder: formatting stuff in answer box
+  requires: null
+- number: 17
+  type: free
+  title: question text
+  flag: answer
+  answer_case_sensitive: false
+  placeholder: formatting stuff in answer box
+  requires: null
+- number: 18
+  type: free
+  title: question text
+  flag: answer
+  answer_case_sensitive: false
+  placeholder: formatting stuff in answer box
+  requires: null
+- number: 19
+  type: free
+  title: question text
+  flag: answer
+  answer_case_sensitive: false
+  placeholder: formatting stuff in answer box
+  requires: null
+- number: 20
+  type: free
+  title: question text
+  flag: answer
+  answer_case_sensitive: false
+  placeholder: formatting stuff in answer box
+  requires: null
