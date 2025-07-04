@@ -7,7 +7,7 @@ Prepared by: handlehere
 
 Machine Author(s): handlehere
 
-Difficulty:<font color="Green">Easy</font> /<font color="orange">Medium</font>/<font color="red">Hard</font>/<font color="Grey">Insane</font>
+Difficulty:<font color="Light Green">Very Easy</font>/<font color="Green">Easy</font>/<font color="orange">Medium</font>/<font color="red">Hard</font>/<font color="Grey">Insane</font>
 
 ## Scenario
 ```
