@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block name -%}
+Two Sum
+{%- endblock %}
+
+{% block description -%}
+You are given an list of integers, as well as a target integer.
+Your task is to find two distinct integers in the list that add up to the target integer.
+Assume there is only one pair that satisfies this condition.
+{%- endblock %}
+
+{% block input_format -%}
+Input format:
+- The first line contains two space-separated integers: T and N. T is the target integer, and N is the number of integers in the list that will follow.
+- The second line contains N space-separated integers, which are the elements of the list.
+{%- endblock %}
+
+{% block output_format -%}
+Output format:
+- Print the two integers that add up to the target integer, separated by a space.
+- The integers should be printed in ascending order.
+{%- endblock %}
+
+{% block constraints %}
+-20000 <= T <= 20000
+5 <= N <= 10000
+-10000 < = list[i] <= 10000
+{%- endblock %}
+
+{% block example -%}
+Input:
+97 5
+-9780 3027 5815 -5718 -6736
+
+Expected output:
+-5718 5815
+{%- endblock %}
+
+{% block explanation -%}
+If we add up -5718 and 5815, we get 97, which is the target integer.
+The other integers do not form a valid pair that sums to the target.
+The output is printed in ascending order as required.
+{%- endblock %}
