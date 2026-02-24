@@ -2,13 +2,13 @@
 
 <img src='assets/htb.png' style='zoom: 80%;' align=left /> <font size='10'><Challenge_Name></font>
 
-1<sup>st</sup> August 2023
+1<sup>st</sup> February 2026
 
-Prepared By: `<author_name>`
+Prepared By: `Doston Abdullayev`
 
-Challenge Author(s): `<author_name>`
+Challenge Author(s): `Doston Abdullayev`
 
-Difficulty: <font color='orange'>Medium</font>
+Difficulty: <font color='orange'>Very Easy</font>
 
 <br><br>
 
@@ -16,97 +16,48 @@ Difficulty: <font color='orange'>Medium</font>
 
 # Synopsis (!)
 
-- Briefly explain what the user must do to solve this challenge.
+- Users should try to find secret message which is hidden in conversation using ASCII basic skills.
 
 ## Description (!)
 
-- ...
+- Scenario: Leader of hackers group sends message to his team members and hid secret message inside it
 
 ## Skills Required (!)
 
-- Python
-- Researching Skills
-- C/C++
-- Know how to use common RE tools (i.e. Ghidra, IDA)
-- ...
+- ASCII
+- Basic computer input understanding
 
 ## Skills Learned (!)
 
-- Learn how SQLi works.
-- Learn how to unpack executables.
-- Learn how to solve linear systems of equations.
-- ...
+- How ASCII works
 
 # Enumeration (!)
 
-## Analyzing the source code (*)
+We have only message file and our objective is to find secret message from it which is flag.
+Here is the message:
+<img width="1722" height="526" alt="image" src="https://github.com/user-attachments/assets/5edfb87f-8e45-4a34-9293-ddaf605de1e8" />
 
-- Explain what source files you are provided with when you unzip the challenge zip file.
+Using tools like file says it is just unicode text, but when we used `strings` tool to message we can see something suspicious:</br>
+<img width="802" height="178" alt="image" src="https://github.com/user-attachments/assets/f69eb16d-2277-4124-ac15-3ea2a0d39f10" /></br>
 
-Analyze the source files as much as you can so it is clear what the challenge is about.
-
-...
-
-If we look at `source.py`, we can see that our goal is:
-
-- Specify the goal of the challenge (i.e. where the flag is and how it can be accessed)
-- ...
-
-The basic workflow of the script is as follows:
-
-1. Method `test()` is called which then calls `test1()`
-2. `test1()` creates an object of the `XXX` class which initializes `YYY`.
-3. ...
-
-A little summary of all the interesting things we have found out so far:
-
-1. The PHP query handler does not use prepared statements.
-2. The RSA modulo is generated with a non-standard way.
-3. ...
-
-# Solution (!)
-
-## Finding the vulnerability (*)
-
-Explain where the vulnerability is. Be as detailed as possible so there are no logical gaps as to how you figured out the vulnerability and how you will proceed to the solution.
+Strings does not show all letters!
 
 ## Exploitation (!)
 
-### Connecting to the server (*)
+After testing multpile tools we can use single `xxd` command to see what is happening:</br>
+<img width="639" height="425" alt="image" src="https://github.com/user-attachments/assets/1c033749-803a-4c05-aefb-fd1a5afeb4ba" />
+</br>
+We can see writers of letter used cyrillic letters identical to latin to hide secret message</br>
+For example above picture syrillic H is `d09d` meanwhile latin H is `480a`:</br>
+<img width="502" height="95" alt="image" src="https://github.com/user-attachments/assets/e9037cdb-5ae0-4839-8a9e-b6bd1afe4ecd" /></br>
+Point is computer treats cyrilic to latin differently even though it is same for the eyes
 
-Here is some boilerplate code for connecting to a docker-based challenge:
 
-```python
-if __name__ == "__main__":
-    r = remote("0.0.0.0", 1337)
-    pwn()
-```
-
-Let us consider our attack scenario.
-
-1. ...
-2. ...
-3. ...
-
-The attack explained above can be implemented with the following code:
-
-```python
-def important_function_that_does_something(param1, param2):
-    <function_body>
-```
 
 ### Getting the flag (!)
 
-A final summary of all that was said above:
-
-1.
-2.
-
-This recap can be represented by code using `pwn()` function:
-
-```python
-def pwn():
-    pass
-```
-
-Avoid writing any function body here. Make sure you have written them under `Exploitation` or `Finding the vulnerability` sections.
+To find secret message which is flag we need to retrieve each hidden cyrillic letters picking them from left to right. I noticed writer used team member to hide `{` and `}`
+</br>
+<img width="634" height="603" alt="image" src="https://github.com/user-attachments/assets/362ebc6d-3cac-4521-a67b-d57e9ea00010" />
+</br>
+Final form of our flag is: HTB{aOycexc}
