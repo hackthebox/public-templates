@@ -1,208 +1,126 @@
-scenario: Write the spoiler-free story here.
-description: Describe what happens in the sherlock here.
+scenario: >- # Player-facing story, no spoilers.
+  The story the player reads before investigating. Give the starting context and objective.
+  Do not reveal attack techniques, answers, or the outcome.
+
+description: >- # Challenge summary, spoilers allowed.
+  Summarize what actually happens in the Sherlock, including the attack techniques,
+  investigation, and outcome. This summary may contain spoilers.
+
 difficulty: Medium
-author: gordic
-prepared_by: gordic
+author: SHERLOCK_AUTHOR_1 # Sherlock creator(s).
+prepared_by: WRITEUP_AUTHOR_1 # Writeup author(s).
+
 artifacts:
-  - name: ExampleFile.zip
-    hash: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+  - name: ExampleFile1.zip
+    hash: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa # Example digest.
+    type: SHA-256 # Hash algorithm.
+
+  - name: ExampleFile2.txt
+    hash: bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
     type: SHA-256
+
 questions:
   - number: 1
     title: Example question asking for a short text answer.
-    type: task
-    flag: example answer
-    is_answer_case_sensitive: false
-    is_optional: false
-    version: 0
-    requires: null
-    placeholder: '**************'
-    hint: Example hint text.
+    type: task # Always use task.
+    flag: 'example answer' # Expected answer, always a string.
+    is_answer_case_sensitive: false # Use true only when capitalization matters.
+    is_optional: false # Required for submissions.
+    version: 0 # Always use 0.
+    requires: null # Independent; use an earlier number only for a real prerequisite.
+    placeholder: '**************' # Answer format or mask.
+    hint: Example hint text. # Optional clue; omit if unused.
+
   - number: 2
-    title: Example question asking for a username without its domain.
-    type: task
-    flag: example_user
-    is_answer_case_sensitive: false
-    is_optional: false
-    version: 0
-    requires: 1
-    placeholder: username without domain
-    hint: Example hint text.
-  - number: 3
     title: Example question asking for an email address.
     type: task
-    flag: analyst@example.com
+    flag: 'analyst@example.com'
     is_answer_case_sensitive: false
     is_optional: false
     version: 0
     requires: null
     placeholder: email address
     hint: Example hint text.
-  - number: 4
+
+  - number: 3
     title: Example question asking for a filename with its extension.
     type: task
-    flag: ExampleFile.txt
+    flag: 'ExampleFile.txt'
     is_answer_case_sensitive: false
     is_optional: false
     version: 0
-    requires: 3
+    requires: null
     placeholder: filename.ext
     hint: Example hint text.
-  - number: 5
+
+  - number: 4
     title: Example question asking for a UTC timestamp.
     type: task
     flag: '2026-01-01 12:34:56'
     is_answer_case_sensitive: false
     is_optional: false
     version: 0
-    requires: 4
+    requires: null
     placeholder: YYYY-MM-DD hh:mm:ss
     hint: Example hint text.
-  - number: 6
+
+  - number: 5
     title: Example question asking for a SHA-256 hash.
     type: task
-    flag: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    flag: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
     is_answer_case_sensitive: false
     is_optional: false
     version: 0
     requires: null
     placeholder: SHA-256 Hash
     hint: Example hint text.
-  - number: 7
+
+  - number: 6
     title: Example question asking for an absolute Windows file path.
     type: task
-    flag: C:\Users\example_user\Documents\ExampleFile.txt
-    is_answer_case_sensitive: false
-    is_optional: false
-    version: 0
-    requires: 6
-    placeholder: full path of file, starting with drive letter
-    hint: Example hint text.
-  - number: 8
-    title: Example question asking for a domain name.
-    type: task
-    flag: service.example.com
+    flag: 'C:\Users\example_user\Documents\ExampleFile.txt'
     is_answer_case_sensitive: false
     is_optional: false
     version: 0
     requires: null
-    placeholder: domain name
-    hint: Example hint text.
-  - number: 9
+    placeholder: full path of file, starting with drive letter
+
+  - number: 7
     title: Example question asking for an IPv4 address.
     type: task
-    flag: 192.0.2.10
+    flag: '192.0.2.10'
     is_answer_case_sensitive: false
     is_optional: false
     version: 0
-    requires: 8
+    requires: null
     placeholder: IPv4 address
-    hint: Example hint text.
-  - number: 10
-    title: Example question asking for an IPv4 address and port.
-    type: task
-    flag: 192.0.2.10:8080
-    is_answer_case_sensitive: false
-    is_optional: false
-    version: 0
-    requires: 9
-    placeholder: IPv4:port
-    hint: Example hint text.
-  - number: 11
+
+  - number: 8
     title: Example question asking for a complete URL.
     type: task
-    flag: https://service.example.com:8443/example/path
-    is_answer_case_sensitive: false
-    is_optional: false
-    version: 0
-    requires: 10
-    placeholder: URL
-    hint: Example hint text.
-  - number: 12
-    title: Example question asking for a count.
-    type: task
-    flag: '3'
+    flag: 'https://service.example.com:8443/example/path'
     is_answer_case_sensitive: false
     is_optional: false
     version: 0
     requires: null
-    placeholder: number, such as 3, 17, or 4567
-  - number: 13
+    placeholder: URL
+
+  - number: 9
     title: Example question using a custom placeholder and case-sensitive matching.
     type: task
-    flag: ExampleKey:ExampleValue
-    is_answer_case_sensitive: true
-    is_optional: false
-    version: 0
-    requires: 7
-    placeholder: KeyName:ValueName (preserve capitalization)
-    hint: Example hint text.
-  - number: 14
-    title: Example question asking for a MITRE ATT&CK sub-technique identifier.
-    type: task
-    flag: T0000.000
-    is_answer_case_sensitive: false
-    is_optional: false
-    version: 0
-    requires: 13
-    placeholder: T****.***
-    hint: Example hint text.
-  - number: 15
-    title: Example question asking for a true or false answer.
-    type: task
-    flag: 'true'
-    is_answer_case_sensitive: false
+    flag: 'ExampleKey:ExampleValue'
+    is_answer_case_sensitive: true # Capitalization must match.
     is_optional: false
     version: 0
     requires: null
-    placeholder: true/false
-    hint: Example hint text.
-  - number: 16
-    title: Example question asking for a yes or no answer.
+    placeholder: KeyName:ValueName (preserve capitalization) # Custom placeholder text.
+
+  - number: 10
+    title: Example question asking for an IPv6 address.
     type: task
-    flag: 'yes'
+    flag: '2001:db8:0:0:0:0:0:1'
     is_answer_case_sensitive: false
     is_optional: false
-    version: 0
-    requires: null
-    placeholder: yes/no
-  - number: 17
-    title: Example question asking for a URL path only.
-    type: task
-    flag: /example/path
-    is_answer_case_sensitive: false
-    is_optional: false
-    version: 0
-    requires: 11
-    placeholder: path starting with /, such as /home or /api/v1/auth/login.php
-    hint: Example hint text.
-  - number: 18
-    title: Example single-flag question with punctuation preserved in the placeholder.
-    type: single
-    flag: ExampleToken-A1
-    is_answer_case_sensitive: true
-    is_optional: false
-    version: 0
-    requires: null
-    placeholder: '************-**'
-    hint: Example hint text.
-  - number: 19
-    title: Optional example question asking for an IPv6 address.
-    type: task
-    flag: 2001:db8:0:0:0:0:0:1
-    is_answer_case_sensitive: false
-    is_optional: true
     version: 0
     requires: null
     placeholder: IPv6 address
-    hint: Example hint text.
-  - number: 20
-    title: Optional example question asking for an MD5 hash.
-    type: task
-    flag: bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-    is_answer_case_sensitive: false
-    is_optional: true
-    version: 1
-    requires: 3
-    placeholder: MD5 Hash
-    hint: Example hint text.

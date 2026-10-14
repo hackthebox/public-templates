@@ -9,27 +9,28 @@
 </p>
 2026-10-03
 
-Prepared by: gordic
+Prepared by: WRITEUP_AUTHOR_1
 
-Sherlock Author(s): gordic
+Sherlock Author(s): SHERLOCK_AUTHOR_1
 
 Difficulty: <font color="orange">Medium</font>
 
 ## Description
 
 ```
-Describe what happens in the sherlock here.
+Summarize what actually happens in the Sherlock, including the attack techniques, investigation, and outcome. This summary may contain spoilers.
 ```
 
 ## Scenario
 
 ```
-Write the spoiler-free story here.
+The story the player reads before investigating. Give the starting context and objective. Do not reveal attack techniques, answers, or the outcome.
 ```
 
 ## Artifacts Provided
 
-- ExampleFile.zip - *aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa* (SHA-256)
+- ExampleFile1.zip - *aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa* (SHA-256)
+- ExampleFile2.txt - *bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb* (SHA-256)
 
 ## Skills Learnt
 
@@ -60,169 +61,72 @@ Analysis for a certain key area such as network traffic or disk forensics.
 	**Answer:** <span style="color: #9FEF00;">`example answer`</span>
 
 
-2. **Example question asking for a username without its domain.**
+2. **Example question asking for an email address.**
 
     <div style="border: 1px solid; border-radius: 5px; padding: 10px 10px; margin: 10px 10px; border-color: #9FEF00; background-color: rgba(160, 255, 00, 0.1); width: 800px; color: #9FEF00;"><span style="color: rgba(0, 0, 0, 0.7);">💡</span> Hint: Example hint text.</div>
 
 	Explanation for question 2.
 
-	**Answer:** <span style="color: #9FEF00;">`example_user`</span>
+	**Answer:** <span style="color: #9FEF00;">`analyst@example.com`</span>
 
 
-3. **Example question asking for an email address.**
+3. **Example question asking for a filename with its extension.**
 
     <div style="border: 1px solid; border-radius: 5px; padding: 10px 10px; margin: 10px 10px; border-color: #9FEF00; background-color: rgba(160, 255, 00, 0.1); width: 800px; color: #9FEF00;"><span style="color: rgba(0, 0, 0, 0.7);">💡</span> Hint: Example hint text.</div>
 
 	Explanation for question 3.
 
-	**Answer:** <span style="color: #9FEF00;">`analyst@example.com`</span>
+	**Answer:** <span style="color: #9FEF00;">`ExampleFile.txt`</span>
 
 
-4. **Example question asking for a filename with its extension.**
+4. **Example question asking for a UTC timestamp.**
 
     <div style="border: 1px solid; border-radius: 5px; padding: 10px 10px; margin: 10px 10px; border-color: #9FEF00; background-color: rgba(160, 255, 00, 0.1); width: 800px; color: #9FEF00;"><span style="color: rgba(0, 0, 0, 0.7);">💡</span> Hint: Example hint text.</div>
 
 	Explanation for question 4.
 
-	**Answer:** <span style="color: #9FEF00;">`ExampleFile.txt`</span>
+	**Answer:** <span style="color: #9FEF00;">`2026-01-01 12:34:56`</span>
 
 
-5. **Example question asking for a UTC timestamp.**
+5. **Example question asking for a SHA-256 hash.**
 
     <div style="border: 1px solid; border-radius: 5px; padding: 10px 10px; margin: 10px 10px; border-color: #9FEF00; background-color: rgba(160, 255, 00, 0.1); width: 800px; color: #9FEF00;"><span style="color: rgba(0, 0, 0, 0.7);">💡</span> Hint: Example hint text.</div>
 
 	Explanation for question 5.
 
-	**Answer:** <span style="color: #9FEF00;">`2026-01-01 12:34:56`</span>
-
-
-6. **Example question asking for a SHA-256 hash.**
-
-    <div style="border: 1px solid; border-radius: 5px; padding: 10px 10px; margin: 10px 10px; border-color: #9FEF00; background-color: rgba(160, 255, 00, 0.1); width: 800px; color: #9FEF00;"><span style="color: rgba(0, 0, 0, 0.7);">💡</span> Hint: Example hint text.</div>
-
-	Explanation for question 6.
-
 	**Answer:** <span style="color: #9FEF00;">`aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa`</span>
 
 
-7. **Example question asking for an absolute Windows file path.**
+6. **Example question asking for an absolute Windows file path.**
 
-    <div style="border: 1px solid; border-radius: 5px; padding: 10px 10px; margin: 10px 10px; border-color: #9FEF00; background-color: rgba(160, 255, 00, 0.1); width: 800px; color: #9FEF00;"><span style="color: rgba(0, 0, 0, 0.7);">💡</span> Hint: Example hint text.</div>
-
-	Explanation for question 7.
+	Explanation for question 6.
 
 	**Answer:** <span style="color: #9FEF00;">`C:\Users\example_user\Documents\ExampleFile.txt`</span>
 
 
-8. **Example question asking for a domain name.**
+7. **Example question asking for an IPv4 address.**
 
-    <div style="border: 1px solid; border-radius: 5px; padding: 10px 10px; margin: 10px 10px; border-color: #9FEF00; background-color: rgba(160, 255, 00, 0.1); width: 800px; color: #9FEF00;"><span style="color: rgba(0, 0, 0, 0.7);">💡</span> Hint: Example hint text.</div>
-
-	Explanation for question 8.
-
-	**Answer:** <span style="color: #9FEF00;">`service.example.com`</span>
-
-
-9. **Example question asking for an IPv4 address.**
-
-    <div style="border: 1px solid; border-radius: 5px; padding: 10px 10px; margin: 10px 10px; border-color: #9FEF00; background-color: rgba(160, 255, 00, 0.1); width: 800px; color: #9FEF00;"><span style="color: rgba(0, 0, 0, 0.7);">💡</span> Hint: Example hint text.</div>
-
-	Explanation for question 9.
+	Explanation for question 7.
 
 	**Answer:** <span style="color: #9FEF00;">`192.0.2.10`</span>
 
 
-10. **Example question asking for an IPv4 address and port.**
+8. **Example question asking for a complete URL.**
 
-    <div style="border: 1px solid; border-radius: 5px; padding: 10px 10px; margin: 10px 10px; border-color: #9FEF00; background-color: rgba(160, 255, 00, 0.1); width: 800px; color: #9FEF00;"><span style="color: rgba(0, 0, 0, 0.7);">💡</span> Hint: Example hint text.</div>
-
-	Explanation for question 10.
-
-	**Answer:** <span style="color: #9FEF00;">`192.0.2.10:8080`</span>
-
-
-11. **Example question asking for a complete URL.**
-
-    <div style="border: 1px solid; border-radius: 5px; padding: 10px 10px; margin: 10px 10px; border-color: #9FEF00; background-color: rgba(160, 255, 00, 0.1); width: 800px; color: #9FEF00;"><span style="color: rgba(0, 0, 0, 0.7);">💡</span> Hint: Example hint text.</div>
-
-	Explanation for question 11.
+	Explanation for question 8.
 
 	**Answer:** <span style="color: #9FEF00;">`https://service.example.com:8443/example/path`</span>
 
 
-12. **Example question asking for a count.**
+9. **Example question using a custom placeholder and case-sensitive matching.**
 
-	Explanation for question 12.
-
-	**Answer:** <span style="color: #9FEF00;">`3`</span>
-
-
-13. **Example question using a custom placeholder and case-sensitive matching.**
-
-    <div style="border: 1px solid; border-radius: 5px; padding: 10px 10px; margin: 10px 10px; border-color: #9FEF00; background-color: rgba(160, 255, 00, 0.1); width: 800px; color: #9FEF00;"><span style="color: rgba(0, 0, 0, 0.7);">💡</span> Hint: Example hint text.</div>
-
-	Explanation for question 13.
+	Explanation for question 9.
 
 	**Answer:** <span style="color: #9FEF00;">`ExampleKey:ExampleValue`</span>
 
 
-14. **Example question asking for a MITRE ATT&CK sub-technique identifier.**
+10. **Example question asking for an IPv6 address.**
 
-    <div style="border: 1px solid; border-radius: 5px; padding: 10px 10px; margin: 10px 10px; border-color: #9FEF00; background-color: rgba(160, 255, 00, 0.1); width: 800px; color: #9FEF00;"><span style="color: rgba(0, 0, 0, 0.7);">💡</span> Hint: Example hint text.</div>
-
-	Explanation for question 14.
-
-	**Answer:** <span style="color: #9FEF00;">`T0000.000`</span>
-
-
-15. **Example question asking for a true or false answer.**
-
-    <div style="border: 1px solid; border-radius: 5px; padding: 10px 10px; margin: 10px 10px; border-color: #9FEF00; background-color: rgba(160, 255, 00, 0.1); width: 800px; color: #9FEF00;"><span style="color: rgba(0, 0, 0, 0.7);">💡</span> Hint: Example hint text.</div>
-
-	Explanation for question 15.
-
-	**Answer:** <span style="color: #9FEF00;">`true`</span>
-
-
-16. **Example question asking for a yes or no answer.**
-
-	Explanation for question 16.
-
-	**Answer:** <span style="color: #9FEF00;">`yes`</span>
-
-
-17. **Example question asking for a URL path only.**
-
-    <div style="border: 1px solid; border-radius: 5px; padding: 10px 10px; margin: 10px 10px; border-color: #9FEF00; background-color: rgba(160, 255, 00, 0.1); width: 800px; color: #9FEF00;"><span style="color: rgba(0, 0, 0, 0.7);">💡</span> Hint: Example hint text.</div>
-
-	Explanation for question 17.
-
-	**Answer:** <span style="color: #9FEF00;">`/example/path`</span>
-
-
-18. **Example single-flag question with punctuation preserved in the placeholder.**
-
-    <div style="border: 1px solid; border-radius: 5px; padding: 10px 10px; margin: 10px 10px; border-color: #9FEF00; background-color: rgba(160, 255, 00, 0.1); width: 800px; color: #9FEF00;"><span style="color: rgba(0, 0, 0, 0.7);">💡</span> Hint: Example hint text.</div>
-
-	Explanation for question 18.
-
-	**Answer:** <span style="color: #9FEF00;">`ExampleToken-A1`</span>
-
-
-19. **Optional example question asking for an IPv6 address.**
-
-    <div style="border: 1px solid; border-radius: 5px; padding: 10px 10px; margin: 10px 10px; border-color: #9FEF00; background-color: rgba(160, 255, 00, 0.1); width: 800px; color: #9FEF00;"><span style="color: rgba(0, 0, 0, 0.7);">💡</span> Hint: Example hint text.</div>
-
-	Explanation for question 19.
+	Explanation for question 10.
 
 	**Answer:** <span style="color: #9FEF00;">`2001:db8:0:0:0:0:0:1`</span>
-
-
-20. **Optional example question asking for an MD5 hash.**
-
-    <div style="border: 1px solid; border-radius: 5px; padding: 10px 10px; margin: 10px 10px; border-color: #9FEF00; background-color: rgba(160, 255, 00, 0.1); width: 800px; color: #9FEF00;"><span style="color: rgba(0, 0, 0, 0.7);">💡</span> Hint: Example hint text.</div>
-
-	Explanation for question 20.
-
-	**Answer:** <span style="color: #9FEF00;">`bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb`</span>
-
