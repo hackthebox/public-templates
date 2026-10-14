@@ -27,7 +27,7 @@ questions:
     is_answer_case_sensitive: false # Use true only when capitalization matters.
     is_optional: false # Required for submissions.
     version: 0 # Always use 0.
-    requires: null # Independent; use an earlier number only for a real prerequisite.
+    requires: null # Visible from the start. An earlier number hides it until that question is answered.
     placeholder: '**************' # Answer format or mask.
     hint: Example hint text. # Optional clue; omit if unused.
 

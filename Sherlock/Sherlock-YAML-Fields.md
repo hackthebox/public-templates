@@ -35,6 +35,8 @@ Each entry in `questions` contains these fields.
 | `is_answer_case_sensitive` | Boolean | Default `false`. Choose `true` when capitalization must match exactly. |
 | `is_optional` | Boolean | Always use `false`. |
 | `version` | Integer | Always use `0`. |
-| `requires` | Integer or null | Default `null`, meaning independent. Use an existing earlier question number only for a genuine prerequisite. |
+| `requires` | Integer or null | Default `null`: visible from the start. Set an existing earlier question number to hide this question until that question is answered. |
 | `placeholder` | String | Nonempty answer format guide or mask, such as `IPv4 address`, `YYYY-MM-DD hh:mm:ss`, or `'********'`. Custom text is supported. |
 | `hint` | String | Optional clue. Omit it when no hint is needed. |
+
+For example, `requires: 1` keeps a question hidden until question 1 is answered. Leave it as `null` unless this progression is intentional.
