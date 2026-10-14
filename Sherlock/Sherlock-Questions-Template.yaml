@@ -1,145 +1,126 @@
-scenario: >
- PLACEHOLDER TEXT
-description: >
-  DESCRIPTION
+scenario: >- # Player-facing story, no spoilers.
+  The story the player reads before investigating. Give the starting context and objective.
+  Do not reveal attack techniques, answers, or the outcome.
+
+description: >- # Challenge summary, spoilers allowed.
+  Summarize what actually happens in the Sherlock, including the attack techniques,
+  investigation, and outcome. This summary may contain spoilers.
+
+difficulty: Medium
+author: SHERLOCK_AUTHOR_1 # Sherlock creator(s).
+prepared_by: WRITEUP_AUTHOR_1 # Writeup author(s).
+
+artifacts:
+  - name: ExampleFile1.zip
+    hash: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa # Example digest.
+    type: SHA-256 # Hash algorithm.
+
+  - name: ExampleFile2.txt
+    hash: bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+    type: SHA-256
+
 questions:
-- number: 1
-  type: free
-  title: question text
-  flag: answer
-  answer_case_sensitive: false
-  placeholder: formatting stuff in answer box
-  requires: null
-- number: 2
-  type: free
-  title: question text
-  flag: answer
-  answer_case_sensitive: false
-  placeholder: formatting stuff in answer box
-  requires: null
-- number: 3
-  type: free
-  title: question text
-  flag: answer
-  answer_case_sensitive: false
-  placeholder: formatting stuff in answer box
-  requires: null
-- number: 4
-  type: free
-  title: question text
-  flag: answer
-  answer_case_sensitive: false
-  placeholder: formatting stuff in answer box
-  requires: null
-- number: 5
-  type: free
-  title: question text
-  flag: answer
-  answer_case_sensitive: false
-  placeholder: formatting stuff in answer box
-  requires: null
-- number: 6
-  type: free
-  title: question text
-  flag: answer
-  answer_case_sensitive: false
-  placeholder: formatting stuff in answer box
-  requires: null
-- number: 7
-  type: free
-  title: question text
-  flag: answer
-  answer_case_sensitive: false
-  placeholder: formatting stuff in answer box
-  requires: null
-- number: 8
-  type: free
-  title: question text
-  flag: answer
-  answer_case_sensitive: false
-  placeholder: formatting stuff in answer box
-  requires: null
-- number: 9
-  type: free
-  title: question text
-  flag: answer
-  answer_case_sensitive: false
-  placeholder: formatting stuff in answer box
-  requires: null
-- number: 10
-  type: free
-  title: question text
-  flag: answer
-  answer_case_sensitive: false
-  placeholder: formatting stuff in answer box
-  requires: null
-- number: 11
-  type: free
-  title: question text
-  flag: answer
-  answer_case_sensitive: false
-  placeholder: formatting stuff in answer box
-  requires: null
-- number: 12
-  type: free
-  title: question text
-  flag: answer
-  answer_case_sensitive: false
-  placeholder: formatting stuff in answer box
-  requires: null
-- number: 13
-  type: free
-  title: question text
-  flag: answer
-  answer_case_sensitive: false
-  placeholder: formatting stuff in answer box
-  requires: null
-- number: 14
-  type: free
-  title: question text
-  flag: answer
-  answer_case_sensitive: false
-  placeholder: formatting stuff in answer box
-  requires: null
-- number: 15
-  type: free
-  title: question text
-  flag: answer
-  answer_case_sensitive: false
-  placeholder: formatting stuff in answer box
-  requires: null
-- number: 16
-  type: free
-  title: question text
-  flag: answer
-  answer_case_sensitive: false
-  placeholder: formatting stuff in answer box
-  requires: null
-- number: 17
-  type: free
-  title: question text
-  flag: answer
-  answer_case_sensitive: false
-  placeholder: formatting stuff in answer box
-  requires: null
-- number: 18
-  type: free
-  title: question text
-  flag: answer
-  answer_case_sensitive: false
-  placeholder: formatting stuff in answer box
-  requires: null
-- number: 19
-  type: free
-  title: question text
-  flag: answer
-  answer_case_sensitive: false
-  placeholder: formatting stuff in answer box
-  requires: null
-- number: 20
-  type: free
-  title: question text
-  flag: answer
-  answer_case_sensitive: false
-  placeholder: formatting stuff in answer box
-  requires: null
+  - number: 1
+    title: Example question asking for a short text answer.
+    type: task # Always use task.
+    flag: 'example answer' # Expected answer, always a string.
+    is_answer_case_sensitive: false # Use true only when capitalization matters.
+    is_optional: false # Required for submissions.
+    version: 0 # Always use 0.
+    requires: null # Visible from the start. An earlier number hides it until that question is answered.
+    placeholder: '**************' # Answer format or mask.
+    hint: Example hint text. # Optional clue; omit if unused.
+
+  - number: 2
+    title: Example question asking for an email address.
+    type: task
+    flag: 'analyst@example.com'
+    is_answer_case_sensitive: false
+    is_optional: false
+    version: 0
+    requires: null
+    placeholder: email address
+    hint: Example hint text.
+
+  - number: 3
+    title: Example question asking for a filename with its extension.
+    type: task
+    flag: 'ExampleFile.txt'
+    is_answer_case_sensitive: false
+    is_optional: false
+    version: 0
+    requires: null
+    placeholder: filename.ext
+    hint: Example hint text.
+
+  - number: 4
+    title: Example question asking for a UTC timestamp.
+    type: task
+    flag: '2026-01-01 12:34:56'
+    is_answer_case_sensitive: false
+    is_optional: false
+    version: 0
+    requires: null
+    placeholder: YYYY-MM-DD hh:mm:ss
+    hint: Example hint text.
+
+  - number: 5
+    title: Example question asking for a SHA-256 hash.
+    type: task
+    flag: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
+    is_answer_case_sensitive: false
+    is_optional: false
+    version: 0
+    requires: null
+    placeholder: SHA-256 Hash
+    hint: Example hint text.
+
+  - number: 6
+    title: Example question asking for an absolute Windows file path.
+    type: task
+    flag: 'C:\Users\example_user\Documents\ExampleFile.txt'
+    is_answer_case_sensitive: false
+    is_optional: false
+    version: 0
+    requires: null
+    placeholder: full path of file, starting with drive letter
+
+  - number: 7
+    title: Example question asking for an IPv4 address.
+    type: task
+    flag: '192.0.2.10'
+    is_answer_case_sensitive: false
+    is_optional: false
+    version: 0
+    requires: null
+    placeholder: IPv4 address
+
+  - number: 8
+    title: Example question asking for a complete URL.
+    type: task
+    flag: 'https://service.example.com:8443/example/path'
+    is_answer_case_sensitive: false
+    is_optional: false
+    version: 0
+    requires: null
+    placeholder: URL
+
+  - number: 9
+    title: Example question using a custom placeholder and case-sensitive matching.
+    type: task
+    flag: 'ExampleKey:ExampleValue'
+    is_answer_case_sensitive: true # Capitalization must match.
+    is_optional: false
+    version: 0
+    requires: null
+    placeholder: KeyName:ValueName (preserve capitalization) # Custom placeholder text.
+
+  - number: 10
+    title: Example question asking for an IPv6 address.
+    type: task
+    flag: '2001:db8:0:0:0:0:0:1'
+    is_answer_case_sensitive: false
+    is_optional: false
+    version: 0
+    requires: null
+    placeholder: IPv6 address
